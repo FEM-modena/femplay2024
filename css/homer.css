@@ -1,0 +1,235 @@
+/*
+ *  Homer - The Story Flow Editor.
+ *  Copyright (c) 2021-2022. Open Lab s.r.l - Florence, Italy
+ *  Developer: Pupunzi (Matteo Bicocchi)
+ *  version: {{ version }}
+ *  build: {{ buildnum }}
+ */
+@import "fonts.css";
+* {
+  box-sizing: border-box;
+}
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #0c0c0c;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+}
+body header h1 {
+  margin: 5px;
+  vertical-align: top;
+  display: inline-block;
+}
+body #structure {
+  border-right: 1px solid #2a2c34;
+  position: relative;
+  display: inline-block;
+  height: calc(100% - 100px);
+  width: 300px;
+  padding: 10px;
+}
+body #structure #flows {
+  max-height: calc(100% - 250px);
+  overflow: auto;
+}
+body #project,
+body #flow {
+  vertical-align: top;
+  position: relative;
+  display: inline-block;
+  height: calc(100% - 100px);
+  min-width: calc(100% - 350px);
+}
+body #project-buttons,
+body #properties {
+  height: 100%;
+  padding: 10px;
+  width: 350px;
+  border-right: 1px solid #2a2c34;
+  vertical-align: top;
+  display: inline-block;
+}
+body #project-content,
+body #flow-content,
+body #node-content {
+  height: 100%;
+  width: calc(100% - 370px);
+  padding: 10px;
+  vertical-align: top;
+  display: inline-block;
+  overflow: auto;
+  position: relative;
+}
+body #node-content {
+  text-align: center;
+  width: 100%;
+}
+body #node-content #actor-avatar {
+  position: relative;
+  display: inline-block;
+  width: 180px;
+  height: 180px;
+}
+body #node-content p {
+  font-weight: 100;
+  padding: 20px;
+  font-size: 160%;
+  max-width: 900px;
+  margin: auto;
+}
+body #cover {
+  width: 100%;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+body #the-end {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #214199;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+}
+body #the-end:after {
+  content: 'The End';
+  font-size: 300%;
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+body h1 {
+  font-weight: 100;
+}
+body h2 {
+  margin: 0;
+  padding: 0 0 0px;
+  font-weight: 100;
+  color: #214199;
+}
+body h3 {
+  margin: 0;
+  padding: 0 0 0px;
+  font-weight: 100;
+  font-size: 120%;
+  color: #214199;
+}
+body h4 {
+  margin: 0;
+  padding: 0 0 0px;
+  font-weight: 100;
+  font-size: 120%;
+  color: #ffffff;
+}
+body hr {
+  border: 0;
+  height: 1px;
+  background: #2a2c34;
+}
+body button {
+  border: none;
+  border: 1px solid #214199;
+  background-color: transparent;
+  padding: 10px;
+  margin: 10px;
+  color: #214199;
+  transition: all 0.3s;
+  min-width: 200px;
+  font-weight: 100;
+  font-size: 120%;
+}
+body button.choice {
+  position: relative;
+  display: block;
+  border: 1px solid #918d89;
+  color: #fff;
+  margin: auto auto 10px;
+  border-radius: 10px;
+}
+body button.choice:hover {
+  background-color: #214199;
+  border: 1px solid #214199;
+}
+body button:hover {
+  border: none;
+  border: 1px solid #214199;
+  background-color: #214199;
+  padding: 10px;
+  color: #ffffff;
+}
+body label {
+  color: #214199;
+  margin: 10px;
+  font-size: 18px;
+  display: block;
+}
+body .label {
+  color: #fff;
+  font-weight: 100;
+  margin-right: 10px;
+}
+body .button {
+  width: 100%;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+body .button.locale {
+  width: auto;
+  display: inline-block;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  margin: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+body .button.selected {
+  background-color: #214199;
+}
+body .button.selected:hover {
+  background-color: #214199;
+}
+body .button:hover {
+  background-color: rgba(33, 65, 153, 0.3);
+}
+body .list {
+  width: 100%;
+  padding: 10px;
+  transition: all 0.3s;
+  cursor: default;
+}
+body .list.small {
+  font-size: 80%;
+}
+body .sub-list {
+  cursor: default;
+  margin-left: 30px;
+  opacity: 0.5;
+}
+body key {
+  font-weight: 100;
+  font-size: 80%;
+  margin-right: 10px;
+}
+body value {
+  font-size: 80%;
+}
+/*# sourceMappingURL=homer.css.map */

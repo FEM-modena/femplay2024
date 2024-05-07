@@ -1,0 +1,79 @@
+<!--
+  ~  Homer - The Story Flow Editor.
+  ~  Copyright (c) 2021-2022. Open Lab s.r.l - Florence, Italy
+  ~  Developer: Pupunzi (Matteo Bicocchi)
+  ~  version: {{ version }}
+  ~  build: {{ buildnum }}
+  -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homer Project</title>
+  <link href="css/homer.css" rel="stylesheet">
+
+  <script src="javascript/avataaars.js" defer></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+  <script src="projectData/HomerVars.js" defer></script>
+  <script src="classes/HomerParser.js" defer></script>
+  <script src="javascript/homer.js" defer></script>
+
+</head>
+<body>
+<header id="header">
+  <img src="https://homer.open-lab.com/assets/images/logo.png" width="180">
+  <h1>Project Name</h1>
+</header>
+
+<div id="structure">
+  <label>Locale</label>
+  <div id="locale"></div>
+
+  <br>
+  <br>
+  <h2>Project Name</h2>
+  <div class="button" id="project-name" onclick="homerDrawer.selectProject()"></div>
+
+  <br>
+  <br>
+  <h2>Flows</h2>
+  <div id="flows"></div>
+
+</div>
+
+<div id="project">
+  <div id="project-buttons">
+    <!--<div class="button" id="project-locale">Locale</div>-->
+    <div class="button selected" id="project-actors" onclick="homerDrawer.printActors()">Actors</div>
+    <div class="button" id="project-global-variables" onclick="homerDrawer.printGlobalVariables()">Global Variables</div>
+    <div class="button" id="project-meta" onclick="homerDrawer.printMetadata()">Metadata</div>
+    <div class="button" id="project-labels" onclick="homerDrawer.printLabels()">Labels</div>
+  </div>
+  <div id="project-content">
+  </div>
+</div>
+
+<div id="flow" style="display: none;">
+  <div id="properties"></div>
+  <div id="flow-content">
+
+    <div id="cover">
+      <h2>Project Name</h2>
+      <h1>Flow Name</h1>
+      <button onclick="homerDrawer.start()">START</button>
+    </div>
+
+    <div id="node-content" style="display: none;">
+      <span id="actor-avatar">Avatar</span>
+      <h3 id="actor-name">Actor Name</h3>
+      <p id="text">content</p>
+      <div id="choices"></div>
+    </div>
+
+    <div id="the-end" style="display: none;"></div>
+
+  </div>
+</div>
+
+</body>
+</html>
