@@ -9,6 +9,8 @@
 
 class HomerVars {
 
+      static population = 0;
+      static water_level = 0;
       static world_temperature = 28;
 
 };
