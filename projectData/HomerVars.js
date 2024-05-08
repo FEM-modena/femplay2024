@@ -15,6 +15,7 @@ class HomerVars {
 
 class HomerActors {
 
+      static DOCTOR = "Doctor";
       static NARRATORE = "Narratore";
 
 }
