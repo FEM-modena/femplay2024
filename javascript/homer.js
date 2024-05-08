@@ -43,29 +43,6 @@ window.homerDrawer = {
 	},
 
 	init: () => {
-		/**
-		 * List all Project Locale
-		 */
-		Homer._project._availableLocale.forEach((locale) => {
-
-			//console.debug(locale);
-
-			let locale_placeholder = $("<div>").addClass("button locale");
-			locale_placeholder.html(locale._code);
-			locale_placeholder.on("click", () => {
-				homerDrawer.placeholders.locales.find(".selected").removeClass("selected");
-				homerDrawer.selectLocale(locale._code);
-				locale_placeholder.addClass("selected");
-			});
-
-			/**
-			 * Select actual Project locale
-			 */
-			if (Homer._project._locale === locale._code)
-				locale_placeholder.addClass("selected");
-			homerDrawer.placeholders.locales.append(locale_placeholder);
-			//console.debug(homerDrawer.placeholders.locales)
-		});
 
 		/**
 		 * Project Name
@@ -74,35 +51,14 @@ window.homerDrawer = {
 		homerDrawer.placeholders.project_name.addClass("selected");
 		homerDrawer.placeholders.title.html(Homer._project._name);
 
-		/**
-		 * List all Project Flows
-		 */
-		Homer._project._flows.forEach((flow) => {
-			let flow_placeholder = $("<div>").addClass("button").attr({id: flow._id});
-			flow_placeholder.html(flow._name);
-			flow_placeholder.on("click", () => {
-				homerDrawer.selectFlow(flow._id);
-			});
-			homerDrawer.placeholders.flowList.append(flow_placeholder);
-		});
-
-		/**
-		 * List Project Actors
-		 */
-		homerDrawer.printActors();
+		
+		homerDrawer.selectFlow(Homer._project._flows[0]._id);
 
 	},
 
-	selectProject: () => {
-		homerDrawer.placeholders.flowList.find(".selected").removeClass("selected");
-		homerDrawer.placeholders.structure.find("#project-name").addClass("selected");
-		homerDrawer.placeholders.flow.hide();
-		homerDrawer.placeholders.project.show();
-	},
 
 	selectFlow: (flowId) => {
-
-
+		
 		homerDrawer.placeholders.flow.show();
 		homerDrawer.placeholders.flow.find("#cover").show();
 
