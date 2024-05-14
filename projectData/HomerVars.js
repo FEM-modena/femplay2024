@@ -1,6 +1,6 @@
 /**
 * javascript variables for the Homer project:
-* FEM+PLAY - Mondo Futuro
+* Sabbie & Stregoni 
 * Homer - The Story Flow Editor.
 * Copyright (c)2021-2024. Open Lab s.r.l - Florence, Italy
 * Developer: Pupunzi (Matteo Bicocchi)
@@ -9,6 +9,7 @@
 
 class HomerVars {
 
+      static character = "";
       static population = 0;
       static water_level = 0;
       static world_temperature = 28;
@@ -17,12 +18,19 @@ class HomerVars {
 
 class HomerActors {
 
-      static DOCTOR = "Doctor";
+      static ENCICLOPEDIA = "ENCICLOPEDIA";
       static NARRATORE = "Narratore";
 
 }
 
 class HomerMeta {
+      static CSS_CLASS = {
+          CLASS_3 : 'CLASS_3',
+          CLASS_2 : 'CLASS_2',
+          CLASS_1 : 'CLASS_1',
+      };
+      static GA_EVENT = {
+      };
       static FLOW_STATE = {
           IDEA : 'IDEA',
           NOTES : 'NOTES',
@@ -75,8 +83,6 @@ class HomerMeta {
           BACK : 'BACK',
           PRACTICAL : 'PRACTICAL',
           HARD : 'HARD',
-          SOFT : 'SOFT',
-          CHIAROSCURO : 'CHIAROSCURO',
       };
 
 }
@@ -88,7 +94,7 @@ class HomerLabels {
 
 
 class HomerFlowSlugs {
-      static START = "Start";
-      static LOOP_SCENE = "Loop scene";
+      static INIZIO = "INIZIO";
+      static TEST_TEMP = "test temp";
  }
 
