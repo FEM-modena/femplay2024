@@ -9,6 +9,12 @@
 
 class HomerVars {
 
+      static percentuale = 0;
+      static total_players = 0;
+      static end_4 = 0;
+      static end_3 = 0;
+      static end_2 = 0;
+      static end_1 = 0;
       static character = "";
       static population = 0;
       static water_level = 0;
@@ -25,6 +31,7 @@ class HomerActors {
 
 class HomerMeta {
       static CSS_CLASS = {
+          CLASS_4 : 'CLASS_4',
           CLASS_3 : 'CLASS_3',
           CLASS_2 : 'CLASS_2',
           CLASS_1 : 'CLASS_1',
