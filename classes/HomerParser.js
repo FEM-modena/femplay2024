@@ -877,7 +877,7 @@ class HomerParser {
 	nodeExists(nodeId, flowId = null) {
 		let flow;
 		if (flowId) {
-			flow = Homer.getFlowById(flowId);
+			flow = Homer.getFlow(flowId);
 		} else {
 			flow = Homer.getSelectedFlow();
 		}
