@@ -278,7 +278,7 @@ window.homerDrawer = {
 			return;
 		}
 		
-		//ADD CLASSNAME TO BODY
+		//ADD CLASS_NAME TO BODY
 		const class_name = homerDrawer.getNodeMetaDataByKey(node, "CSS_CLASS");
 		$("body").removeAttr('class');
 		if (class_name !== null) {
@@ -297,9 +297,9 @@ window.homerDrawer = {
 		homerDrawer.placeholders.node_image.empty();
 		const node_image = node._image || null;
 		if (node_image !== null) {
-			console.debug(node._image);
 			
 			const img = $("<img>").attr({src: node_image});
+			console.debug(node_image);
 			homerDrawer.placeholders.node_image.append(img);
 		}
 		
