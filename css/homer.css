@@ -9,14 +9,17 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   position: absolute;
   width: 100%;
   height: 100%;
   padding: 20px;
   background-color: #ffc00336;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 16px;
+  font-family: "Courier Prime", monospace;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
   color: #000000;
 }
 body header h1 {
@@ -155,6 +158,8 @@ body button {
   min-width: 200px;
   font-weight: 100;
   font-size: 120%;
+  font-family: "Courier Prime", monospace;
+
 }
 body button.choice {
   position: relative;

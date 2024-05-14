@@ -313,9 +313,9 @@ window.homerDrawer = {
 			if (window.actor != null && !window.actor._isNarrator)
 				window.avatar = window.Avataaars.create(actor._avatar._options);
 			
-			let actorName = actor._name + (window.actor._isNarrator ? " (narrator)" : "");
-			switch (node._type) {
-				
+			let actorName = actor._name;
+
+			switch (node._type) {	
 				case NodeType.text:
 					homerDrawer.placeholders.actor_avatar_placeholder.empty();
 					homerDrawer.placeholders.actor_name_placeholder.empty();
@@ -326,7 +326,7 @@ window.homerDrawer = {
 					homerDrawer.placeholders.actor_name_placeholder.html(actorName);
 					homerDrawer.placeholders.text_placeholder.html(Homer.getParsedText());
 					
-					let next = $("<button>").addClass("main").html("Next");
+					let next = $("<button>").addClass("main").html("AVANTI");
 					
 					next.on("click", () => {
 						homerDrawer.drawNext();
