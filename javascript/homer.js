@@ -32,8 +32,7 @@ window.homerDrawer = {
 		
 		flow         : $("#flow"),
 		properties   : $("#properties"),
-		flow_title   : $("#flow #cover h1"),
-		project_title: $("#flow #cover h2"),
+		project_title: $("#flow #cover h1"),
 		cover        : $("#cover"),
 		node_content : $("#node-content"),
 		node_image   : $("#node-image"),
@@ -50,6 +49,7 @@ window.homerDrawer = {
 		/**
 		 * Project Name
 		 */
+		document.title = Homer._project._name;
 		homerDrawer.placeholders.project_name.html(Homer._project._name);
 		homerDrawer.placeholders.project_name.addClass("selected");
 		homerDrawer.placeholders.title.html(Homer._project._name);
