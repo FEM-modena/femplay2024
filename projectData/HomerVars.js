@@ -96,5 +96,7 @@ class HomerLabels {
 class HomerFlowSlugs {
       static INIZIO = "INIZIO";
       static TEST_TEMP = "test temp";
+      static STORIA = "STORIA";
+      static FINALI = "FINALI";
  }
 
