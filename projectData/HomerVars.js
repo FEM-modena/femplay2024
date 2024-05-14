@@ -16,9 +16,6 @@ class HomerVars {
       static end_2 = 0;
       static end_1 = 0;
       static character = "";
-      static population = 0;
-      static water_level = 0;
-      static world_temperature = 28;
 
 };
 
@@ -102,7 +99,6 @@ class HomerLabels {
 
 class HomerFlowSlugs {
       static INIZIO = "INIZIO";
-      static TEST_TEMP = "test temp";
       static STORIA = "STORIA";
       static FINALI = "FINALI";
  }
