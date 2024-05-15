@@ -9,6 +9,10 @@
 
 class HomerVars {
 
+      static percentuale_4 = 0;
+      static percentuale_3 = 0;
+      static percentuale_2 = 0;
+      static percentuale_1 = 0;
       static percentuale = 0;
       static total_players = 0;
       static end_4 = 0;
@@ -21,6 +25,9 @@ class HomerVars {
 
 class HomerActors {
 
+      static CITTADINI = "Cittadini";
+      static MAGA = "Maga";
+      static CONSIGLIERE = "Consigliere";
       static ENCICLOPEDIA = "ENCICLOPEDIA";
       static NARRATORE = "Narratore";
 
