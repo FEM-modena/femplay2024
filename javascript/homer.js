@@ -308,9 +308,19 @@ window.homerDrawer = {
 		if (node != null) {
 			
 			window.actor = Homer.getNodeActor();
-			if (window.actor != null && !window.actor._isNarrator)
-				window.avatar = window.Avataaars.create(actor._avatar._options);
-			
+			//if (window.actor != null && !window.actor._isNarrator)
+			//	window.avatar = window.Avataaars.create(actor._avatar._options);
+			// console.debug("window.actor_name = " + window.actor._name);
+			if (window.actor._name == "Maga") {
+				window.avatar = '<img src="img/avatar_maga.jpg" alt="Maga Avatar"></img>'
+			}
+			if (window.actor._name == "Consigliere") {
+				window.avatar = '<img src="img/avatar_consigliere.jpg" alt="Consigliere Avatar"></img>'
+			}
+			if (window.actor._name == "Cittadini") {
+				window.avatar = '<img src="img/avatar_cittadini.jpg" alt="Cittadini Avatar"></img>'
+			}
+
 			let actorName = actor._name;
 			if (actorName == "ENCICLOPEDIA") {
 				$("#container").addClass("special-story-container");
@@ -324,7 +334,7 @@ window.homerDrawer = {
 					homerDrawer.placeholders.actor_name_placeholder.empty();
 					homerDrawer.placeholders.text_placeholder.empty();
 					homerDrawer.placeholders.choices_placeholder.empty();
-					
+
 					homerDrawer.placeholders.actor_avatar_placeholder.html(avatar);
 					homerDrawer.placeholders.actor_name_placeholder.html(actorName);
 					homerDrawer.placeholders.text_placeholder.html(Homer.getParsedText());

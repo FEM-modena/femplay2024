@@ -48,7 +48,18 @@
         }
       .story-text {
           margin-top: 20px;
-          font-size: 16px;
+          font-size: 17px;
+      }
+      .avatar-container {
+            text-align: center;
+            margin-bottom: 20px;
+      }
+      .avatar-container img {
+          width: 100px; /* Adjust size of the avatar image */
+          height: 100px; /* Adjust size of the avatar image */
+          border-radius: 50%; /* Create circular mask */
+          border: 2px solid #fff; /* Add border around the avatar */
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Optional: Add shadow */
       }
       .choices {
             margin-top: 20px;
@@ -122,6 +133,9 @@
       <div id="node-content" style="display: none;">
   <!--      <span id="actor-avatar">Avatar</span> -->
         <h3 id="actor-name">Actor Name</h3>
+        <div id="actor-avatar" class="avatar-container">
+          <img src="img/avatar_maga.jpg" alt="Speaker Avatar">
+        </div>
         <div id="node-image"><img src="image.jpg" class="img-fluid" alt="Story Image"></div>
         <p id="text" class="story-text">content</p>
         <div id="choices" class="choices"></div>
