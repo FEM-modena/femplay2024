@@ -296,8 +296,7 @@ window.homerDrawer = {
 		//SHOW IMAGE
 		homerDrawer.placeholders.node_image.empty();
 		const node_image = node._image || null;
-		if (node_image !== null) {
-			
+		if (node_image !== null) {	
 			const img = $("<img>").attr({src: node_image});
 			console.debug(node_image);
 			homerDrawer.placeholders.node_image.append(img);
@@ -309,12 +308,16 @@ window.homerDrawer = {
 		if (node != null) {
 			
 			window.actor = Homer.getNodeActor();
-			
 			if (window.actor != null && !window.actor._isNarrator)
 				window.avatar = window.Avataaars.create(actor._avatar._options);
 			
 			let actorName = actor._name;
-
+			if (actorName == "ENCICLOPEDIA") {
+				$("#container").addClass("special-story-container");
+			} else {
+				$("#container").removeClass("special-story-container");
+			}
+			
 			switch (node._type) {	
 				case NodeType.text:
 					homerDrawer.placeholders.actor_avatar_placeholder.empty();
@@ -326,14 +329,13 @@ window.homerDrawer = {
 					homerDrawer.placeholders.actor_name_placeholder.html(actorName);
 					homerDrawer.placeholders.text_placeholder.html(Homer.getParsedText());
 					
-					let next = $("<button>").addClass("main").html("AVANTI");
+					let next = $("<button>").addClass("btn btn-primary choice-button").html("AVANTI");
 					
 					next.on("click", () => {
 						homerDrawer.drawNext();
 					});
 					
 					homerDrawer.placeholders.choices_placeholder.html(next);
-					homerDrawer.placeholders.choices_placeholder.prepend("<br><br>");
 					break;
 				
 				case NodeType.choices:
@@ -349,7 +351,7 @@ window.homerDrawer = {
 					let elements = Homer.getAvailableChoices();
 					elements.forEach((element) => {
 						let choiceText = Homer.getParsedText(element);
-						let choiceButton = $("<button>").addClass("choice").html(choiceText);
+						let choiceButton = $("<button>").addClass("btn btn-primary choice-button").html(choiceText);
 						choiceButton.on("click", () => {
 							homerDrawer.drawNext(element._id);
 						});

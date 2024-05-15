@@ -2,9 +2,59 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Homer Project</title>
-  <link href="css/homer.css" rel="stylesheet">
-
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <style>
+      /* Additional custom styles */
+      body {
+            font-family: 'Special Elite', cursive;
+            background-color: #FDD974; /* Yellow sand color */
+            margin: 0;
+            padding: 0;
+      }
+      .story-container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+        }
+      /* Special story container styles */
+      .special-story-container {
+            background-color: #FFE4B5; /* Light brown background */
+            color: #4A4A4A; /* Dark font color */
+        }
+      .story-text {
+          margin-top: 20px;
+          font-size: 16px;
+      }
+      .choices {
+          margin-top: 20px;
+      }
+      .choice-button {
+          margin: 5px;
+          border-radius: 20px; /* Rounded corners */
+          padding: 10px 20px; /* Adjust padding */
+          background-color: #8B4513; /* Dark orange/brown color */
+          border: none; /* Remove border */
+      }
+      .choice-button:hover {
+          background-color: #A0522D; /* Darken the color on hover */
+      }
+      /* Footer styles */
+      footer {
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          padding: 20px;
+          position: fixed;
+          bottom: 0;
+          width: 100%;
+      }
+  </style>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3NL6WN6FC"></script>
 <script>
@@ -15,8 +65,16 @@
   gtag('config', 'G-D3NL6WN6FC');
 </script>
 
+    <!-- Bootstrap JS and dependencies (if needed) -->
+    <!-- Optional: jQuery and Popper.js for Bootstrap's JavaScript plugins -->
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
   <script src="javascript/avataaars.js" defer></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
   <script src="projectData/HomerVars.js" defer></script>
   <script src="classes/HomerParser.js" defer></script>
   <script src="javascript/homer.js" defer></script>
@@ -28,22 +86,27 @@
   <h1>Project Name</h1>
 </header>
 -->
-<div id="flow" style="display: none;">
-  <div id="flow-content">
-    <div id="cover">
-      <h1>Project Name</h1>
-      <button onclick="homerDrawer.start()">INIZIAMO</button>
+<div id="container" class="container story-container">
+  <div id="flow" style="display: none;">
+    <div id="flow-content">
+      <div id="cover">
+        <h1>Project Name</h1>
+        <button onclick="homerDrawer.start()">INIZIAMO</button>
+      </div>
+      <div id="node-content" style="display: none;">
+  <!--      <span id="actor-avatar">Avatar</span> -->
+        <h3 id="actor-name">Actor Name</h3>
+        <div id="node-image"><img src="image.jpg" class="img-fluid" alt="Story Image"></div>
+        <p id="text" class="story-text">content</p>
+        <div id="choices" class="choices"></div>
+      </div>
+      <div id="the-end" style="display: none;"></div>
     </div>
-    <div id="node-content" style="display: none;">
-<!--      <span id="actor-avatar">Avatar</span> -->
-      <h3 id="actor-name">Actor Name</h3>
-      <div id="node-image"></div>
-      <p id="text">content</p>
-      <div id="choices"></div>
-    </div>
-    <div id="the-end" style="display: none;"></div>
   </div>
-</div>
 
+</div>
+<footer>
+  <p></p>
+</footer>
 </body>
 </html>
