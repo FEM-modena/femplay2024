@@ -7,6 +7,6 @@ browser-sync
 
 
 ## Play Online
-<https://fem-modena.github.io/femplay2024/>
+<https://fem-modena.github.io/sabbie-stregoni/>
 
 
