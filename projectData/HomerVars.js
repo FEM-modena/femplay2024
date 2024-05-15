@@ -26,8 +26,8 @@ class HomerVars {
 class HomerActors {
 
       static CITTADINI = "Cittadini";
-      static MAGA = "Maga";
-      static CONSIGLIERE = "Consigliere";
+      static CSABA_MAGA = "Csaba Maga";
+      static CONSIGLIERE_REVAN = "Consigliere Revan";
       static ENCICLOPEDIA = "ENCICLOPEDIA";
       static NARRATORE = "Narratore";
 
