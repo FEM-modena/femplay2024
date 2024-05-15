@@ -18,7 +18,14 @@
             background-position: center;
             background-attachment: fixed
       }
-
+      .overlay {
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
       .story-container {
             max-width: 800px;
             margin: 20px auto;
@@ -26,6 +33,12 @@
             background-color: white;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+            position: relative; /* Needed for stacking */
+            z-index: 1; /* Make sure content appears above the overlay */
+        }
+        .story-container img {
+            width: 100%; /* Make image responsive */
+            border-radius: 10px; /* Apply border-radius to image */
         }
       /* Special story container styles */
       .special-story-container {
@@ -97,12 +110,14 @@
   <h1>Project Name</h1>
 </header>
 -->
+<div class="overlay"></div> <!-- Semi-transparent overlay -->
+
 <div id="container" class="container story-container">
   <div id="flow" style="display: none;">
     <div id="flow-content">
       <div id="cover">
         <h1>Project Name</h1>
-        <p>Un'avventura per scoprire quanto sono simpatici Dora, Stefano e Diego nel farvi soffrire su un pianeta desertico e decidere il futuro dell'umanità! Se moriamo tutti è colpa tua. SAPPILO!</p>
+        <p>Un'avventura per scoprire quanto sono simpatici Dora, Stefano e Diego nel farti soffrire su un pianeta desertico e decidere il futuro dell'umanità! Se moriamo tutti è colpa tua. SAPPILO!</p>
         <button onclick="homerDrawer.start()">INIZIAMO</button>
       </div>
       <div id="node-content" style="display: none;">
